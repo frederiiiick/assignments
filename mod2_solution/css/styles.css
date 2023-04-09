@@ -1,4 +1,5 @@
 
+* { box-sizing: border-box; }
 body {
     padding: 0 10px;
     font-family: 'Mukta', sans-serif;
@@ -11,12 +12,13 @@ body {
 .sections > section {
     position: relative;
     width: 33.33%;
-    margin-right: 20px;
+    margin-right: 1%;
     padding: 20px;
     background-color: #999999;
     border: 3px solid black;
+    transition: .3s ease-in-out;
 }
-.sections > section:nth-child(3) { margin-right: 0px; }
+.sections > section:nth-child(3) { margin-right: 0; }
 .sections > section > p {
     margin: 0;
     padding-top: 20px;
@@ -41,9 +43,12 @@ body {
 
 /* TABLET VIEW */
 @media (min-width: 768px) and (max-width: 991px) {
-    .sections { flex-wrap: wrap; }
-    .sections > section { width: 42.35%; }
-    .sections > section:nth-child(2) { margin-right: 0px; }
+    .sections { 
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .sections > section { width: 49%; }
+    .sections > section:nth-child(2) { margin-right: 0; }
     .sections > section:nth-child(3) {
         width: 100%;
         margin-top: 20px;
