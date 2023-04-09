@@ -40,6 +40,8 @@ body {
 .sections > section[data-bg-color="pink"]::after { background-color: #D59898; }
 .sections > section[data-bg-color="red"]::after { background-color: #C14543; }
 .sections > section[data-bg-color="yellow"]::after { background-color: #E5D198; }
+.sections > section[data-color="white"]::after { color: #fff; }
+
 
 /* TABLET VIEW */
 @media (min-width: 768px) and (max-width: 991px) {
