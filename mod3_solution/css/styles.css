@@ -1,0 +1,37 @@
+.sections { display: flex; }
+.sections > div > section {
+    position: relative;
+    padding: 20px;
+    background-color: #999999;
+    border: 1px solid black;
+    transition: .3s ease-in-out;
+}
+.sections > div > section:nth-child(3) { margin-right: 0; }
+.sections > div > section > p {
+    margin: 0;
+    padding-top: 50px;
+    font-weight: 700;
+    font-size: 16px;
+}
+.sections > div > section::after {
+    content: attr(data-menu);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    font-size: 20px;
+    background:  var(data-color);
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px 0;
+}
+.sections > div > section[data-bg-color="pink"]::after { background-color: #D59898; }
+.sections > div > section[data-bg-color="red"]::after { background-color: #C14543; }
+.sections > div > section[data-bg-color="yellow"]::after { background-color: #E5D198; }
+.sections > div > section[data-color="white"]::after { color: #fff; }
+#navbar-header { 
+    background-color: #999999;
+    padding: calc(1.5rem * .5);
+}
+.nav-item { border-bottom: 1px solid; }
